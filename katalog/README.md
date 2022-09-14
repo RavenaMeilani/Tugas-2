@@ -1,4 +1,5 @@
 Buatlah bagan yang berisi request client ke web aplikasi berbasis Django beserta responnya dan jelaskan pada bagan tersebut kaitan antara urls.py, views.py, models.py, dan berkas html;
+![bagan](https://github.com/RavenaMeilani/Tugas-2/blob/main/katalog/Teks%20paragraf%20Anda.png "Bagan Tugas 2 PBP")
 
 
 Jelaskan kenapa menggunakan virtual environment? Apakah kita tetap dapat membuat aplikasi web berbasis Django tanpa menggunakan virtual environment?
