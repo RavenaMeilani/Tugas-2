@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h5>Nama: </h5>
+<p>{{nama}}</p>
+<h5>NPM: </h5>
+<p>{{npm}}</p>
+
+<table>
+    <tr>
+    <th>Watched</th>
+    <th>Title</th>
+    <th>Rating</th>
+    <th>Release Date</th>
+    <th>Review</th>
+    </tr>
+    {% comment %} Tambahkan data di bawah baris ini {% endcomment %}
+    {% for watchlist in my_watchlist %}
+        <tr>
+            <th>{{watchlist.watched}}</th>
+            <th>{{watchlist.title}}</th>
+            <th>{{watchlist.rating}}</th>
+            <th>{{watchlist.release_date}}</th>
+            <th>{{watchlist.review}}</th>
+        </tr>
+    {% endfor %}
+</table>
+
+{% endblock content %}

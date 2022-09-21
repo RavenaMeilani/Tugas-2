@@ -1,0 +1,121 @@
+[
+    {
+        "model":"mywatchlist.MyWatchlist",
+        "pk":1,
+        "fields":{
+            "watched":"Yes",
+            "title":"Up",
+            "rating":"4.8",
+            "release_date":"29 Juli 2009",
+            "review": "Film animasi yang sangat amat seru dan worth it untuk ditonton berulang kali." 
+        }
+    },
+
+    {
+        "model":"mywatchlist.MyWatchlist",
+        "pk":2,
+        "fields":{
+            "watched":"Yes",
+            "title":"Percy Jackson & the Olympians: The Lightning Thief",
+            "rating":"5.0",
+            "release_date":"10 Februari 2010",
+            "review": "Film ini benar-benar seperti memberikan asupan realisasi dari ekspektasi penggemar film fantasi."
+        }
+    },
+
+    {
+        "model":"mywatchlist.MyWatchlist",
+        "pk":3,
+        "fields":{
+            "watched":"Yes",
+            "title":"Battleship",
+            "rating":"4.6",
+            "release_date":"11 April 2012",
+            "review": "Film seru action yang dibumbui dengan sedikit adanya fantasi."
+        }
+    },
+
+    {
+        "model":"mywatchlist.MyWatchlist",
+        "pk":4,
+        "fields":{
+            "watched":"Yes",
+            "title":"Rio 2",
+            "rating":"4.7",
+            "release_date":"9 April 2014",
+            "review": "Film animasi yang mengisahkan petualangan rio atau seekor burung serta pemiliknya." 
+        }
+    },
+
+    {
+        "model":"mywatchlist.MyWatchlist",
+        "pk":5,
+        "fields":{
+            "watched": "Yes",
+            "title":"The Maze Runner",
+            "rating":"4.7",
+            "release_date":"17 September 2014" ,
+            "review": "Film dengan character yang memberikan pelajaran kesetiaan kawan itu mahal." 
+        }
+    },
+
+    {
+        "model":"mywatchlist.MyWatchlist",
+        "pk":6,
+        "fields":{
+            "watched":"Yes",
+            "title":"Train to Busan",
+            "rating":"4.5",
+            "release_date":"20 Juli 2016" ,
+            "review": "Film horror serta action yang dijadikan satu, yang dapat menciptakan suasana ketegangan." 
+        }
+    },
+
+    {
+        "model":"mywatchlist.MyWatchlist",
+        "pk":7,
+        "fields":{
+            "watched":"No",
+            "title":"Crazy Rich Asians",
+            "rating":"4.5",
+            "release_date":"7 Agustus 2018",
+            "review": "Film dengan genre drama komedi romantis ini menceritakan bagaimana seorang wanita sederhana akan dipersunting oleh seorang lelaki kaya raya." 
+        }
+    },
+
+    {
+        "model":"mywatchlist.MyWatchlist",
+        "pk":8,
+        "fields":{
+            "watched":"Yes",
+            "title":"Avengers: Endgame",
+            "rating":"4.9",
+            "release_date":"24 April 2019",
+            "review": "Film yang menjadi penutup perjalanan Marvel Cinematic Universe phase 3 ini sangat seru dan tidak masalah apabila ditonton untuk semua kalangan usia. Menurut pendapat saya pribadi, film ini sangat sesuai dengan ekspektasi saya seperti film-film marvel lainnya."
+        }
+    },
+
+    {
+        "model":"mywatchlist.MyWatchlist",
+        "pk":9,
+        "fields":{
+            "watched":"No",
+            "title":"Men in Black: International",
+            "rating":"4.3",
+            "release_date":"19 Juni 2019",
+            "review": "Film komedi action yang mengemas cerita berbeda dari film trilogi ini sebelumnya." 
+        }
+    },
+
+    {
+        "model":"mywatchlist.MyWatchlist",
+        "pk":10,
+        "fields":{
+            "watched":"No",
+            "title":"Turning Red",
+            "rating":"4.6",
+            "release_date":"1 Maret 2022",
+            "review": "Film animasi yang menggambarkan realita kehidupan keluarga Tionghoa serta para remaja yang sedang pubertas." 
+        }
+    }
+]
