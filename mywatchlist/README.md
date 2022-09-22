@@ -1,3 +1,5 @@
+https://pbptugas-2.herokuapp.com/mywatchlist/
+
 Jelaskan perbedaan antara JSON, XML, dan HTML!
     → JSON merupakan singkatan dari JavaScript Object Notation, yang didesain menjadi self-describing sehingga mudah untuk dimengerti. JSON digunakan pada banyak aplikasi web maupun mobile, yaitu untuk menyimpan dan mengirimkan data. Sintaks JSON merupakan turunan dari Object JavaScript, akan tetapi format JSON berbentuk text, sehingga kode untuk membaca dan membuat JSON banyak terdapat di banyak bahasa pemrograman.
     → XML merupakan singkatan dari eXtensible Markup Language, yang didesain menjadi self-descriptive sehingga dengan membaca XML dapat mengerti informasi apa yang ingin disampaikan dari data tertulis. XML digunakan pada banyak aplikasi web maupun mobile, yaitu untuk menyimpan dan mengirimkan data. XML hanyalah informasi yang dibungkus dalam tag, sehingga perlu menulis lagi program untuk mengirim, menerima, menyimpan, dan menampilkan informasi.
@@ -103,3 +105,9 @@ Sources :
     https://lmsspada.kemdikbud.go.id/mod/page/view.php?id=57743
     https://drive.google.com/file/d/1HrSrBaxfdouWJKskgQuA0e59Kv-DO3he/view
     https://pbp-fasilkom-ui.github.io/ganjil-2023/assignments/tutorial/tutorial-1
+    
+
+Postman :
+![image](![Screenshot (962)](https://user-images.githubusercontent.com/112611188/191642300-ab3fa02d-53f0-4f2e-8808-409e94d2620f.png))
+![image](![Screenshot (963)](https://user-images.githubusercontent.com/112611188/191642572-a6f0bd11-3696-4041-a777-4df157f07159.png))
+![image](![Screenshot (964)](https://user-images.githubusercontent.com/112611188/191642668-28dedc6e-205d-4dda-b7d3-0b8fbcb466dd.png))
