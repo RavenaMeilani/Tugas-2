@@ -30,9 +30,9 @@ def register(request):
             form.save()
             messages.success(request, 'Akun telah berhasil dibuat!')
             return redirect('todolist:login')
-    else:
-        context = {'form':form}
-        return render(request, 'register.html', context)
+
+    context = {'form':form}
+    return render(request, 'register.html', context)
 
 def login_user(request):
     if request.method == 'POST':
@@ -68,6 +68,6 @@ def create_todolist(request):
         response = HttpResponseRedirect(reverse("todolist:show_todolist"))
         messages.success(request, 'Task saved.')
         return(response)
-    else:
-        context = {}
-        return render(request, 'create-task.html', context)
+   
+    context = {}
+    return render(request, 'create-task.html', context)
