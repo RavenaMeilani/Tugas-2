@@ -2,36 +2,90 @@
 
 {% block content %}
 
+<style>
+table, th{
+    font-weight: bold;
+    font-family:Avanta Garde;
+    text-align: center;
+    border: 5px solid rgb(249, 232, 120);
+    padding: 15px;
+  }
+  td{
+    font-weight: lighter;
+    font-family:monaco;
+    text-align: center;
+    border: 5px solid rgb(249, 232, 120);
+    padding: 15px;
+  }
+</style>
+
+<nav class="navbar" style="background-color: rgb(140, 240, 220);font-family: monospace;">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1">Hello {{user}}!&#9829</span>
+      <a class="btn btn-warning" type="button" href="{% url 'todolist:logout' %}">Log Out</a>
+    </div>
+</nav>
+
+<style>
+    body {
+        background-color: rgb(200, 242, 239)
+    }
+</style>
+
+<h1 style = "text-align: center;">&#127804 TO DO LIST &#127804</h1>
+<table class = "table table-bordered w-auto" s
+
 {% load static %}
 <link rel="stylesheet" href="{% static 'todolist/style.css' %}">
 
-<h1>{{title}} {{name}}.</h1>
-<p>{{subtitle}}</p>
 <br>
-
-<table>
-    <tr>
-       <button><a href="{% url 'todolist:create_todolist' %}">Tambah Task</a></button>
-    </tr>
-  </table>
-
-<br>
-    <table>
+    <table align="center">
         <tr>
-            <th>Date</th>
-            <th>Title</th>
-            <th>Description</th>
+            <th>DATE</th>
+            <th>TITLE</th>
+            <th>DESCRIPTION</th>
         </tr>
         {% comment %} Tambahkan data di bawah baris ini {% endcomment %}
         {% for list in list_task %}
         <tr>
-            <th>{{list.date}}</th>
-            <th>{{list.title}}</th>
-            <th>{{list.description}}</th>
+            <td>{{list.date}}</td>
+            <td>{{list.title}}</td>
+            <td>{{list.description}}</td>
+            <td><a href="{% url 'todolist:delete' list.id %}" input class="btn btn-secondary btn-sm">Delete</a></td>
         </tr>
         {% endfor %}
 </table>
 
-<button><a href="{% url 'todolist:logout' %}">Logout</a></button>
+<div style="display: flex; flex-direction: row; flex-wrap: wrap">
+    {% for card in list_task %}
+    {#  Single Card Template:#}
+    <div class="card" style="width: 15rem; margin: 3px">
+      <img src="{{ card.image }}" class="card-img-top" >
+      <div class="card-body">
+        <div style="display: flex; flex-direction: row">
+          <h5 class="card-title">{{ card.title }}</h5>
+          {#  Colored cirlce:#}
+          <div style="
+            background: rgb(207, 16, 16);
+            width: 20px;
+            height: 20px;
+            margin-left: 10px;
+            border-radius: 50%;
+          "></div>
+        </div>
+        <p class="card-text">{{ card.description }}</p>
+        <p class="card-text">{{ card.date }}</p>
+      </div>
+    </div>
+      
+    {% endfor %}
+  </div>
+  <table>
+    <tr>
+      <div class="container-fluid">
+       <a class="btn btn-outline-success" type="button" href="{% url 'todolist:create_todolist' %}"> Add Task</a></button>
+      </div>
+    </tr>
+  </table>
 
 {% endblock content %}

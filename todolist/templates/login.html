@@ -6,13 +6,21 @@
 
 {% block content %}
 
+<style>
+    body {
+        background-color: mistyrose
+    }
+</style>
+
 <div class = "login">
 
+    <div class = "login container d-flex flex-column justify-content-center align-items-center">
     <h1>Login</h1>
+    </div>
 
     <form method="POST" action="">
         {% csrf_token %}
-        <table>
+        <table align="center">
             <tr>
                 <td>Username: </td>
                 <td><input type="text" name="username" placeholder="Username" class="form-control"></td>
@@ -25,7 +33,7 @@
 
             <tr>
                 <td></td>
-                <td><input class="btn login_btn" type="submit" value="Login"></td>
+                <td><input class="btn login_btn" type="submit" value="login" style="background-color: rgb(163, 163, 163)"></td>
             </tr>
         </table>
     </form>
@@ -37,8 +45,10 @@
             {% endfor %}
         </ul>
     {% endif %}     
-        
-    Belum mempunyai akun? <a href="{% url 'todolist:register' %}">Buat Akun</a>
+    
+    <div class = "login container d-flex flex-column justify-content-center align-items-center">
+    Belum mempunyai akun? <a class="btn btn-outline-primary btn-sm" type="button" href="{% url 'todolist:register' %}"> Buat Akun</a>
+    </div>
 
 </div>
 

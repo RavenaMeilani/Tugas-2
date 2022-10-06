@@ -1,18 +1,26 @@
 {% extends 'base.html' %}
 
 {% block meta %}
-<title>Tambah Task</title>
+<title>Add Task</title>
 {% endblock meta %}
 
 {% block content %}
 
+<style>
+    body {
+        background-color: rgb(238, 241, 220)
+    }
+</style>
+
 <div class = "form">
 
-    <h1>Tambah Task</h1>
+    <div class = "login container d-flex flex-column justify-content-center align-items-center">
+    <h1>New Task</h1>
+    </div>
 
     <form method="POST" action="">
         {% csrf_token %}
-        <table>
+        <table align="center">
             <tr>
                 <td>Task Name: </td>
                 <td><input type="text" name="title" placeholder="Task.." class="form-control"></td>
@@ -25,7 +33,7 @@
 
             <tr>
                 <td></td>
-                <td><input class="btn" type="submit" value="Submit"></td>
+                <td><input class="btn" type="submit" value="submit"></td>
             </tr>
         </table>
     </form>

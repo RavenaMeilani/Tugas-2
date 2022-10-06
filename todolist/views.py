@@ -16,7 +16,6 @@ from django.contrib.auth.models import User
 def show_todolist(request):
     user_currently = request.user
     context = {
-    'title':"Selamat datang",
     'name': user_currently,
     'list_task': Task.objects.filter(user=user_currently),
     }
@@ -28,7 +27,7 @@ def register(request):
         form = UserCreationForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Akun telah berhasil dibuat!')
+            messages.success(request, 'Account has been created successfully!')
             return redirect('todolist:login')
 
     context = {'form':form}
@@ -54,7 +53,7 @@ def logout_user(request):
     response.delete_cookie('last_login')
     return response
 
-@login_required(login_url='login/')
+@login_required(login_url='/todolist/login/')
 def create_todolist(request):
     if request.method == 'POST':
         form = TaskForm(request.POST)
@@ -66,8 +65,13 @@ def create_todolist(request):
         new_task.save()
         
         response = HttpResponseRedirect(reverse("todolist:show_todolist"))
-        messages.success(request, 'Task saved.')
+        messages.success(request, 'New task saved!')
         return(response)
    
     context = {}
     return render(request, 'create-task.html', context)
+
+@login_required(login_url='/todolist/login/')
+def delete(request, pk):
+    Task.objects.filter(id=pk).delete()
+    return redirect('todolist:show_todolist')
