@@ -2,27 +2,32 @@ http://pbptugas-2.herokuapp.com/todolist/
 
 
 Apa perbedaan dari Inline, Internal, dan External CSS? Apa saja kelebihan dan kekurangan dari masing-masing style?
-    → Inline adalah penulisan style CSS pada elemen HTML sebagai attribute dari tag elemen HTML itu sendiri, seperti <h1 style="color:green;text-align:center;">PBP</h1>, dengan kelebihan dan kekurangan :
-           + Dapat mengganti atau mengcustom elemen sebebas mungkin karena tidak berpengaruh antar elemen yang lain
-           + Mudah untuk melihat dan menguji perubahan pada tiap elemen
-           - Attribute tiap elemen banyak atau menjadi panjang
-           - Sulit untuk dibaca karena style yang terlalu banyak
-    → Internal adalah penulisan style CSS pada elemen HTML sebagai attribute yang diletakkan diantara tag <style>, seperti: <style> 
+    → Inline adalah penulisan style CSS pada elemen HTML sebagai attribute dari tag elemen HTML itu sendiri,
+        <h1 style="color:green;text-align:center;">PBP</h1>
+        dengan kelebihan dan kekurangan :
+               + Dapat mengganti atau mengcustom elemen sebebas mungkin karena tidak berpengaruh antar elemen yang lain
+               + Mudah untuk melihat dan menguji perubahan pada tiap elemen
+               - Attribute tiap elemen banyak atau menjadi panjang
+               - Sulit untuk dibaca karena style yang terlalu banyak
+    → Internal adalah penulisan style CSS pada elemen HTML sebagai attribute yang diletakkan diantara tag <style>
+            <style> 
                 h1 {
                     color: green;
                     text-align:center;
                 } 
-             </style>
+            </style>
             dengan kelebihan dan kekurangan :
-                + Semua attribute CSS menjadi satu
-                + Perubahan secara internal karena berlaku pada satu file HTML itu sendiri
-                - Attribute CSS bercampur dengan dokumen HTML
-                - Performa web melambat karena ukural file HTML yang menjadi besar
-    → External CSS adalah penulisan style CSS pada elemen, yang mana terpisah dari kode HTML serta akan dihubungkan ke file HTML dengan tag <link>, seperti <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">, dengan kelebihan dan kekurangan :
-            + Memudahkan membuat banyak properti
-            + Struktur HTML menjadi lebih rapi 
-            - Terlalu kompleks sehingga tidak efektif
-            - Tampilan web akan berpengaruh apabila terdapat masalah saat file CSS dihubungkan ke file HTML
+                    + Semua attribute CSS menjadi satu
+                    + Perubahan secara internal karena berlaku pada satu file HTML itu sendiri
+                    - Attribute CSS bercampur dengan dokumen HTML
+                    - Performa web melambat karena ukural file HTML yang menjadi besar
+    → External CSS adalah penulisan style CSS pada elemen, yang mana terpisah dari kode HTML serta akan dihubungkan ke file HTML dengan tag <link>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        dengan kelebihan dan kekurangan :
+                + Memudahkan membuat banyak properti
+                + Struktur HTML menjadi lebih rapi 
+                - Terlalu kompleks sehingga tidak efektif
+                - Tampilan web akan berpengaruh apabila terdapat masalah saat file CSS dihubungkan ke file HTML
 
 
 Jelaskan tag HTML5 yang kamu ketahui!
