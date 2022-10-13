@@ -1,4 +1,4 @@
-Link heroku :
+Link heroku : http://pbptugas-2.herokuapp.com/todolist/
 
 
 **Jelaskan perbedaan antara asynchronous programming dengan synchronous programming!**
