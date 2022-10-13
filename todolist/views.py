@@ -8,9 +8,11 @@ from django.contrib.auth import logout
 from django.contrib.auth.decorators import login_required
 import datetime
 from django.http import HttpResponseRedirect
+from django.http.response import JsonResponse
 from django.urls import reverse
 from todolist.forms import TaskForm
 from django.contrib.auth.models import User
+from django.core import serializers
 
 @login_required(login_url='/todolist/login/')
 def show_todolist(request):
@@ -75,3 +77,20 @@ def create_todolist(request):
 def delete(request, pk):
     Task.objects.filter(id=pk).delete()
     return redirect('todolist:show_todolist')
+
+@login_required(login_url='/todolist/login/')
+def todolist_json(request):
+    task_list = Task.objects.filter(user=request.user)
+    return HttpResponseRedirect(serializers.serialize("json", task_list), content_type="application/json")
+
+@login_required(login_url='/todolist/login/')
+def show_addTask(request):
+    if request.method == 'POST':
+        user = request.user
+        date = datetime.datetime.now()
+        title = request.POST.get('title')
+        description = request.POST.get('description')
+        Task.objects.create(date=date, user=user, title=title, description=description)
+        return JsonResponse({"Message": 'New task has been added!'},status=200)
+    return redirect('todolist:todolist')
+
